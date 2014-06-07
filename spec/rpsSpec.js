@@ -1,34 +1,37 @@
 describe("Rock, Paper Scissors", function(){
+  var player1 = new Player('1');
+  var player2 = new Player('2');
 
   it("keeps track of wins and losses", function(){
-    var player1 = 'rock';
-    var player2 = 'scissors';
+    player1.choice = 'rock';
+    player2.choice = 'scissors';
     rpsMatch(player1, player2);
-    expect(player1Wins).toEqual(1);
+    expect(player1.wins).toEqual(1);
   })
-  it('if player1 loses player2s score increases by one', function(){
-    var player1 = 'rock';
-    var player2 = 'paper';
+
+  it('if player1 loses player2\'s score increases by one', function(){
+    player1.choice = 'rock';
+    player2.choice = 'paper';
     rpsMatch(player1, player2);
-    expect(player2Wins).toEqual(1);
+    expect(player2.wins).toEqual(1);
   })
   it("paper beats rock", function(){
-    var winningMove = determineWinner('paper', 'rock');
+    var winningMove = pickWinner('paper', 'rock');
     expect(winningMove).toEqual('paper');
   })
 
   it("rock beats scissors", function(){
-    var winningMove = determineWinner('rock', 'scissors');
+    var winningMove = pickWinner('rock', 'scissors');
     expect(winningMove).toEqual('rock');
   })
 
   it("scissors beats paper", function(){
-    var winningMove = determineWinner('scissors', 'paper');
+    var winningMove = pickWinner('scissors', 'paper');
     expect(winningMove).toEqual('scissors');
   })
 
   it("two of the same moves is a draw", function(){
-    var winningMove = determineWinner('scissors', 'scissors');
+    var winningMove = pickWinner('scissors', 'scissors');
     expect(winningMove).toEqual(false);
   })
 })
