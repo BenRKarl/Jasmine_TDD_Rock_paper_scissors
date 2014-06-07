@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: url('../../src/stripes.jpg');
+}
+
+* {
+  font-family: 'Helvetica';
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 1.5em;
+}
+
+#start {
+  color: #3d8bbf;
+  cursor: pointer;
+  margin: 2em 0;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px 7px 3px 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #65a9d7;
+  color: #fff;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #3d8bbf;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #3d8bbf;
+}
+
+.player {
+  width: 50%;
+  position: relative;
+  margin: 1em 0 0 0;
+  float: left;
+  text-align: center;
+}
+
+.player1-choice, 
+.player2-choice {
+  font-size: 18px;
+}
